@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* img{
+            margin-left: 0;
+            position: relative;
+        } */
+        .calculator-container{
+            background-color: #d7f1c8;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+            height: 400px;
+            width: 400px;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 10px;
+            text-align: center;
+            /* position: absolute; */
+        }
+        .headings{
+            margin: 30px 0;
+            text-align: center;   
+            text-decoration: underline;
+        }
+
+        /* label{
+            font-weight: bold;
+        }
+        #post-num1{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        #post-num2{
+            margin-bottom: 10px;
+            border-radius: 5px;
+        } */
+
+        .input{
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button{
+            margin-top: 20px;
+        }
+        input[type="submit"]{
+            margin: 1px;
+            color: rgb(252, 252, 252);
+            background-color: rgb(163, 126, 167);
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover{
+            background-color: rgb(195, 179, 197);
+            
+        }
+     
+        input[value="Divisor"]{
+            padding-right: 18px;
+        }
+        input[value="LCM"]{
+            padding-right: 12px;
+        }
+        .output{
+            border: 1px dashed rgb(0, 174, 255);
+            border-radius: 5px;
+            color: rgb(91, 177, 5);
+            padding: 5px;
+            width: 75%;
+            margin-left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight:600;
+
+        }
+    
+        span{
+            margin-left: 10px;
+            font-weight:600;
+            color:rgb(226, 133, 47)
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="./rec.png" alt="" > -->
+    <!-- <img src="./image/Casio.png" alt=""> -->
+    <section class="calculator-container">
+        <h1 class="headings">Simple Calculator</h1>
+        <form class="calculator-action">
+            <!-- <label for="post-num1">First Number:</label> -->
+            <input type="text" placeholder="Place your 1st number" class="input" id="post-num1"><br>
+            <!-- <label for="post-num2">Second Number:</label> -->
+            <input type="text" placeholder="Place your 2nd number" class="input" id="post-num2"><br>
+            <div class="button">
+                <input type="submit" onclick="add()" value="Add">
+                <input type="submit" onclick="sub()" value="Sub">
+                <input type="submit" onclick="mul()" value="Mul">
+                <input type="submit" onclick="div()" value="Div"><br>
+                <input type="submit" onclick="divisor()" value="Divisor">
+                <input type="submit" onclick="findPercent()" value="Percentage(%)"><br>
+                <input type="submit" onclick="gcd()" value="GCD">
+                <input type="submit" onclick="lcm()" value="LCM">
+                <input type="submit" onclick="isPrime()" value="isPrime?">
+                <!-- <input type="color" value=""> -->
+            </div>
+        </form>
+        <p class="output">Result: <br/><span>00</span></p>
+    </section>
+    <script src="./simpleCalculator.js"></script>
+</body>
+</html>
